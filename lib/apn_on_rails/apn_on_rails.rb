@@ -6,11 +6,15 @@ require 'railites'
 rails_root = File.join(FileUtils.pwd, 'rails_root')
 if defined?(Rails.root)
   rails_root = Rails.root
+elsif defined?(RAILS_ROOT)
+  rails_root = RAILS_ROOT
 end
 
 rails_env = 'development'
 if defined?(Rails.env)
   rails_env = Rails.env
+elsif defined?(RAILS_ENV)
+  rails_env = RAILS_ENV
 end
 
 configatron.apn.set_default(:passphrase, '')
