@@ -1,7 +1,7 @@
 require 'socket'
 require 'openssl'
 require 'configatron'
-require 'railites'
+#require 'railties'
 
 rails_root = File.join(FileUtils.pwd, 'rails_root')
 if defined?(Rails.root)
