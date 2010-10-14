@@ -63,8 +63,8 @@ end
   $LOAD_PATH << path 
   # puts "Adding #{path}"
   begin 
-  ActiveSupport::Dependencies.load_paths << path 
-  ActiveSupport::Dependencies.load_once_paths.delete(path) 
+  ActiveSupport::Dependencies.autoload_paths << path 
+  ActiveSupport::Dependencies.autoload_once_paths.delete(path) 
   rescue NameError
     Dependencies.load_paths << path 
     Dependencies.load_once_paths.delete(path) 
